@@ -1,0 +1,24 @@
+ext {
+    configuration = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "27.0.3",
+            applicationId    : "com.njupt.cicada.restaurantreservation",
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "1.0.0",
+    ]
+
+    dependencies = [
+            "appcompat"       : "27.1.1",
+            "recyclerview"    : "27.1.1",
+            "butterknife"     : "8.5.1",
+            "rxjava"          : "1.1.6",
+            "rxandroid"       : "1.2.1",
+            "retrofit"        : "2.1.0",
+            "glide"           : "4.5.0",
+            "icepick"         : "3.2.0",
+            "AnyPref"         : "1.2.6",
+    ]
+
+}

@@ -1,0 +1,55 @@
+apply plugin: "com.android.library"
+
+def config = rootProject.ext.configuration
+def libs = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ["*.jar"], dir: "libs")
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:${libs.appcompat}"
+    //noinspection GradleCompatible
+    implementation "com.android.support:recyclerview-v7:${libs.recyclerview}"
+    //数据库
+    api files("libs/lite-orm-1.9.1.jar")
+    //列表
+    //网络通信Retrofit
+    api "io.reactivex:rxjava:${libs.rxjava}"
+    api "io.reactivex:rxandroid:${libs.rxandroid}"
+    api "com.squareup.retrofit2:adapter-rxjava:${libs.retrofit}"
+    api "com.squareup.retrofit2:retrofit:${libs.retrofit}"
+    api "com.squareup.retrofit2:converter-gson:${libs.retrofit}"
+    api "com.squareup.retrofit2:converter-scalars:${libs.retrofit}"
+    // RxJava
+    api "com.jakewharton.rxbinding:rxbinding:0.2.0"
+    //Retrofit日志
+    api "com.squareup.okhttp3:logging-interceptor:3.6.0"
+    //图片加载glide
+    api "com.github.bumptech.glide:glide:${libs.glide}"
+    //运行时数据保存https://github.com/frankiesardo/icepick
+    api "frankiesardo:icepick:${libs.icepick}"
+    //分包处理
+    api "com.android.support:multidex:1.0.3"
+    //Toast提示
+    api 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
+    //保存SharedPreferences数据https://github.com/NashLegend/AnyPref
+    api "com.github.NashLegend:AnyPref:${libs.AnyPref}"
+}

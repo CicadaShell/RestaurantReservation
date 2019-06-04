@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+def config = rootProject.ext.configuration
+def libs = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+    defaultConfig {
+        applicationId config.applicationId
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleDependency
+    implementation "com.android.support:appcompat-v7:${libs.appcompat}"
+    //noinspection GradleCompatible
+    implementation "com.android.support:recyclerview-v7:${libs.recyclerview}"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //牛油刀
+    implementation "com.jakewharton:butterknife:${libs.butterknife}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${libs.butterknife}"
+
+    //CalendarView
+    implementation 'com.haibin:calendarview:3.6.2'
+
+    //PickerView
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+
+    implementation 'net.qiujuer.genius:ui:2.0.0'
+
+    implementation project(':Library')
+}

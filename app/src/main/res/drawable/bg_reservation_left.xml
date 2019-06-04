@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:maxLevel="0">
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomLeftRadius="@dimen/regular_dimen_x8"
+                android:topLeftRadius="@dimen/regular_dimen_x8" />
+            <solid android:color="@color/status_type_color01" />
+        </shape>
+    </item>
+    <item android:maxLevel="1">
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomLeftRadius="@dimen/regular_dimen_x8"
+                android:topLeftRadius="@dimen/regular_dimen_x8" />
+            <solid android:color="@color/status_type_color02" />
+        </shape>
+    </item>
+    <item android:maxLevel="2">
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomLeftRadius="@dimen/regular_dimen_x8"
+                android:topLeftRadius="@dimen/regular_dimen_x8" />
+            <solid android:color="@color/status_type_color03" />
+        </shape>
+    </item>
+
+</level-list>

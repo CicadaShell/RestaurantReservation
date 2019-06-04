@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/regular_dimen_x5"
+    android:layout_marginBottom="@dimen/regular_dimen_x10"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/regular_dimen_x16"
+    android:paddingTop="@dimen/regular_dimen_x10"
+    android:paddingRight="@dimen/regular_dimen_x16"
+    android:paddingBottom="@dimen/regular_dimen_x10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/regular_dimen_x30"
+            android:text="小桌"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/regular_dimen_x30"
+            android:src="@mipmap/icon_reservation" />
+
+        <TextView
+            android:id="@+id/tvSmallReservedCount"
+            style="@style/normal_tx_theme"
+            android:layout_marginLeft="@dimen/regular_dimen_x8"
+            android:text="0"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/regular_dimen_x15"
+            android:src="@mipmap/icon_usable" />
+
+        <TextView
+            android:id="@+id/tvSmallUsableCount"
+            style="@style/normal_tx_theme"
+            android:layout_marginLeft="@dimen/regular_dimen_x8"
+            android:text="0"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/regular_dimen_x5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/regular_dimen_x30"
+            android:text="大桌"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/regular_dimen_x30"
+            android:src="@mipmap/icon_reservation" />
+
+        <TextView
+            android:id="@+id/tvBigReservedCount"
+            style="@style/normal_tx_theme"
+            android:layout_marginLeft="@dimen/regular_dimen_x8"
+            android:text="0"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/regular_dimen_x15"
+            android:src="@mipmap/icon_usable" />
+
+        <TextView
+            android:id="@+id/tvBigUsableCount"
+            style="@style/normal_tx_theme"
+            android:layout_marginLeft="@dimen/regular_dimen_x8"
+            android:text="0"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

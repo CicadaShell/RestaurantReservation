@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tab_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="@dimen/regular_dimen_x10"
+        android:paddingTop="@dimen/regular_dimen_x10"
+        android:gravity="center_horizontal"
+        android:text="最新资讯"
+        android:textColor="@drawable/viewpage_selector_slide_title"
+        android:textSize="@dimen/text_size_16" />
+
+</LinearLayout>

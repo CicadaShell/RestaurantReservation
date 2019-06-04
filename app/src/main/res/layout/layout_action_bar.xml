@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/regular_dimen_x3"
+    android:background="@color/theme_color"
+    android:minHeight="?attr/actionBarSize"
+    android:paddingTop="@dimen/toolbar_padding_top"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <TextView
+        android:id="@+id/tvActionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:drawablePadding="@dimen/regular_dimen_x5"
+        android:gravity="center"
+        android:maxLength="12"
+        android:textColor="@color/white"
+        android:textSize="@dimen/abc_text_size_title_material_toolbar" />
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        style="?attr/toolbarNavigationButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="right|center_vertical"
+        android:src="@mipmap/icon_edit"
+        android:visibility="gone" />
+
+</android.support.v7.widget.Toolbar>

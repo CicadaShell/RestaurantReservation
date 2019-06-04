@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_action_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/regular_dimen_x16"
+        android:paddingRight="@dimen/regular_dimen_x16">
+
+        <LinearLayout style="@style/rl_edit_normal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_name" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/regular_dimen_x8"
+                android:background="@drawable/bg_edit_white"
+                android:hint="请输入姓名"
+                android:maxLines="1"
+                android:padding="@dimen/regular_dimen_x8"
+                android:singleLine="true"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_16" />
+
+        </LinearLayout>
+
+        <View style="@style/normal_line_horizontal" />
+
+        <LinearLayout style="@style/rl_edit_normal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_phone" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/regular_dimen_x8"
+                android:background="@drawable/bg_edit_white"
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:padding="@dimen/regular_dimen_x8"
+                android:singleLine="true"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_16" />
+
+        </LinearLayout>
+
+        <View style="@style/normal_line_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/rlDate"
+            style="@style/rl_edit_normal">
+
+            <TextView
+                style="@style/tv_edit_normal"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/icon_date"
+                android:text="预约日期" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableEnd="@mipmap/icon_drop"
+                android:drawablePadding="@dimen/regular_dimen_x5"
+                android:text=""
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/text_size_16" />
+
+        </RelativeLayout>
+
+        <View style="@style/normal_line_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/rlTimeType"
+            style="@style/rl_edit_normal">
+
+            <TextView
+                style="@style/tv_edit_normal"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/icon_time"
+                android:text="时间段" />
+
+            <FrameLayout
+                android:id="@+id/flNight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_time">
+
+                <TextView
+                    android:id="@+id/tvNight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/regular_dimen_x10"
+                    android:paddingRight="@dimen/regular_dimen_x10"
+                    android:text="晚上"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/ivNight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:src="@mipmap/icon_selected"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flNoon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/regular_dimen_x10"
+                android:layout_toLeftOf="@id/flNight"
+                android:background="@drawable/bg_time">
+
+                <TextView
+                    android:id="@+id/tvNoon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/regular_dimen_x10"
+                    android:paddingRight="@dimen/regular_dimen_x10"
+                    android:text="中午"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/ivNoon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:src="@mipmap/icon_selected"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <View style="@style/normal_line_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/rlNumOfPeople"
+            style="@style/rl_edit_normal">
+
+            <TextView
+                style="@style/tv_edit_normal"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/icon_num"
+                android:text="就餐人数" />
+
+            <TextView
+                android:id="@+id/tvNumOfPeople"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableEnd="@mipmap/icon_drop"
+                android:drawablePadding="@dimen/regular_dimen_x5"
+                android:text=""
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/text_size_16" />
+
+        </RelativeLayout>
+
+        <View style="@style/normal_line_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/regular_dimen_x10"
+            android:paddingBottom="@dimen/regular_dimen_x10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_remark" />
+
+            <EditText
+                android:id="@+id/etRemark"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/regular_dimen_x100"
+                android:layout_marginStart="@dimen/regular_dimen_x8"
+                android:background="@drawable/bg_edit_white"
+                android:gravity="top"
+                android:hint="备注"
+                android:maxLength="100"
+                android:padding="@dimen/regular_dimen_x8"
+                android:singleLine="false"
+                android:textColor="@color/normal_text_color"
+                android:textColorHint="@color/gray_text_color"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/regular_dimen_x16"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDelete"
+                style="@style/btn_normal"
+                android:layout_marginRight="@dimen/regular_dimen_x20"
+                android:background="@drawable/btn_delete"
+                android:text="删除"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvSubmit"
+                style="@style/btn_normal"
+                android:text="确认" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

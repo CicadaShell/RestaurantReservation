@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="@dimen/regular_dimen_x12"
+            android:paddingBottom="@dimen/regular_dimen_x12"
+            android:text="就餐人数"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_18" />
+
+    </FrameLayout>
+
+    <View style="@style/normal_line_horizontal" />
+
+    <LinearLayout
+        style="@style/rl_edit_normal"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/regular_dimen_x16"
+        android:paddingRight="@dimen/regular_dimen_x16">
+
+        <!--此部分需要完整复制过去，删减或者更改ID会导致初始化找不到内容而报空-->
+        <LinearLayout
+            android:id="@+id/optionspicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/regular_dimen_x50"
+            android:layout_marginRight="@dimen/regular_dimen_x50"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <com.contrarywind.view.WheelView
+                android:id="@+id/options1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.contrarywind.view.WheelView
+                android:id="@+id/options2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.contrarywind.view.WheelView
+                android:id="@+id/options3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View style="@style/normal_line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/regular_dimen_x10"
+        android:paddingBottom="@dimen/regular_dimen_x10">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/normal_btn_theme"
+            android:background="@drawable/btn_white"
+            android:text="取消"
+            android:textColor="@color/normal_text_color" />
+
+        <Button
+            android:id="@+id/btnSure"
+            style="@style/normal_btn_theme"
+            android:layout_marginStart="@dimen/regular_dimen_x16"
+            android:text="确定" />
+
+    </LinearLayout>
+
+</LinearLayout>

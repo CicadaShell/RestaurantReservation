@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="@dimen/regular_dimen_x10"
+            android:padding="@dimen/regular_dimen_x8"
+            android:src="@mipmap/icon_left"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="@dimen/regular_dimen_x12"
+            android:paddingBottom="@dimen/regular_dimen_x12"
+            android:text="入座"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_18" />
+
+    </FrameLayout>
+
+    <View style="@style/normal_line_horizontal" />
+
+    <LinearLayout
+        style="@style/rl_edit_normal"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/regular_dimen_x16"
+        android:paddingRight="@dimen/regular_dimen_x16">
+
+        <LinearLayout
+            android:id="@+id/llEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/regular_dimen_x16"
+            android:paddingRight="@dimen/regular_dimen_x16">
+
+            <RelativeLayout
+                android:id="@+id/rlArrivalTime"
+                style="@style/rl_edit_normal">
+
+                <TextView
+                    style="@style/tv_edit_normal"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@mipmap/icon_arrival"
+                    android:text="时间" />
+
+                <TextView
+                    android:id="@+id/tvArrivalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:text=""
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/text_size_16" />
+
+            </RelativeLayout>
+
+            <View style="@style/normal_line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/rlTable"
+                style="@style/rl_edit_normal">
+
+                <TextView
+                    style="@style/tv_edit_normal"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@mipmap/icon_table"
+                    android:text="桌号" />
+
+                <TextView
+                    android:id="@+id/tvTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:text=""
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/text_size_16" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flArrivalTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/regular_dimen_x16"
+            android:paddingRight="@dimen/regular_dimen_x16"
+            android:visibility="gone">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/llTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/regular_dimen_x16"
+            android:visibility="gone">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View style="@style/normal_line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/regular_dimen_x10"
+        android:paddingBottom="@dimen/regular_dimen_x10">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/normal_btn_theme"
+            android:background="@drawable/btn_white"
+            android:text="取消"
+            android:textColor="@color/normal_text_color" />
+
+        <Button
+            android:id="@+id/btnSure"
+            style="@style/normal_btn_theme"
+            android:layout_marginStart="@dimen/regular_dimen_x16"
+            android:text="确定" />
+
+    </LinearLayout>
+
+</LinearLayout>

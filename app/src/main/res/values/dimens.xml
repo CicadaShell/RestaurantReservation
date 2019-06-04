@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--toolbar config-->
+    <dimen name="toolbar_padding_top">25dp</dimen>
+
+    <!--line config-->
+    <dimen name="line_width">0.6dp</dimen>
+
+</resources>
