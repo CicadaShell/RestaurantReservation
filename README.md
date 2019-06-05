@@ -2,6 +2,10 @@
 > 南京邮电大学（NJUPT）UML实验-餐厅预订系统
 > 基于Android实现
 
+## 作者
+[Cicada](https://www.cicada-shell.com/)
+邮箱：`cicada_shell@163.com`
+
 ## 运行环境
 * AndroidStudio
 * Android SDK
