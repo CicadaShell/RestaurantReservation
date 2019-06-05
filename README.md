@@ -3,7 +3,7 @@
 > 基于Android实现
 
 ## 作者
-[Cicada](https://www.cicada-shell.com/)
+[Cicada](https://www.cicada-shell.com/)</br>
 邮箱：`cicada_shell@163.com`
 
 ## 运行环境
